@@ -1,0 +1,34 @@
+      <div id="no-page" class="hl-pill-id-module" style="display: block;">
+        <span class="hl-read-more-chevron">&lt;</span>
+        <a ui-sref="index" id="goBackLink2" class="hl-content-link">Back</a>
+        <p class="hl-secondary-heading hl-pi-instruct hl-pill-name">No Problem. Specify the shape and color of your pill</p>
+        <div class="selectionContainer">
+          <a href="#overlayPillIdentifierV2Color" rel="#overlayPillIdentifierV2Color">
+            <div class="hl-select-button hl-select-color-button selectedShapeButton">
+              <div class="hl-select-button-plus">+</div>
+              <div class="hl-select-button-color-shape hl-pill-identifier-overlay-content-list-item hl-pill-indentifier-yellow" style="display: none;"></div>
+              <div class="hl-select-button-multiple-color hl-select-button-two-color"><span style=""><span class="hl-pill-indentifier-yellow"></span><span class="hl-pill-indentifier-red"></span></span></div>
+              <div class="hl-content-copy hl-select-button-text">yellow &amp; red</div>
+            </div>
+            <input type="hidden" name="selectedColor" id="selectedColor" value="yellow,red">
+          </a>
+          <a href="#overlayShapeOptions" rel="#overlayShapeOptions">
+            <div class="hl-select-button hl-select-shape-button selectedShapeButton">
+              <div class="hl-select-button-plus">+</div>
+              <div class="hl-select-button-color-shape hl-pill-identifier-overlay-content-list-item hl-pill-indentifier-round"></div>
+              <div class="hl-content-copy hl-select-button-text">round</div>
+            </div>
+            <input type="hidden" name="selectedShape" id="selectedShape" value="round">
+          </a>
+          <div class="hl-selection-menu">
+            <span class="hl-selection-clear hl-content-link" style="display: inline;">Clear All</span>
+            <a href="#overlayPillIdentifierV2Color" rel="#overlayPillIdentifierV2Color">
+              <span class="hl-selection-add-color hl-content-link" style="display: none;">Add another color</span>
+            </a>
+          </div>
+        </div>
+        <button id="no-page-button-find-imprint" class="primary-button hl-pi-button-full">
+          Find Pill
+          <div class="pill-colorshape-spinner spinner spinner--steps hl-icon-spinner" aria-hidden="true" style="display: none;"></div>
+        </button>
+      </div>

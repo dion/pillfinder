@@ -1,0 +1,23 @@
+{
+  "name": "pillfinder",
+  "version": "0.0.0",
+  "authors": [
+    "dyang@healthline.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3",
+    "bootstrap-ui": "~0.14.3",
+    "angular-mocks": "~1.4.8",
+    "jasmine": "~2.4.1",
+    "karma": "~0.4.6",
+    "ui-router": "~0.2.15"
+  }
+}

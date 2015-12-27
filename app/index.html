@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="pillfinder">
+<head>
+<title>Pill Identifier: Identify Drugs by Picture, Shape, Color, Number</title>
+
+	<link rel="stylesheet" type="text/css" href="./styles/main.css" />	
+	<link href="http://www.healthline.com/resources/healthline/css/pill-identifier-v2.less?v=v1.20151215121446" media="all" type="text/css" rel="stylesheet"/>
+	<link href="http://www.healthline.com/resources/healthline/css/rwd/pill-identifier-v2.less?v=v1.20151215121446" media="all" type="text/css" rel="stylesheet"/>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="./bower_components/ui-router/release/angular-ui-router.min.js"></script>
+	<!--script src="./bower_components/angular-animate/angular-animate.js"></script//-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap.min.js"></script>
+	<!--script src="./bower_components/bootstrap-ui/dist/ui-bootstrap-0.14.3.min.js"></script>
+	<script src="./bower_components/bootstrap-ui/dist/ui-bootstrap-tpls-0.14.3.min.js"></script//-->
+	<script src="./scripts/app.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-7 pillwizard-container">
+			<div ui-view="pillWizard"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-7 pillsearch-container">		
+			<div ui-view="pillSearch"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
