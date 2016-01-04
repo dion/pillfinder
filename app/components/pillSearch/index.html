@@ -2,12 +2,11 @@
 	<form>
 		<div class="form-group">
 			<div class="row">
-	<!-- 		<label for="xyz">Enter pill name</label>-->		
-				<input type="email" placeholder="Enter pill name" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" class="col-md-12">
+				<input type="text" uib-typeahead="item.Term for item in vm.drugs" placeholder="Enter pill name" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" ng-model="selected" class="col-md-12">
 			</div>
 			
 			<div class="row">
-				<button type="button" class="btn btn-primary col-md-12" ui-sref="pillSearch"><strong>Find Pill</strong></button>
+				<button type="button" class="btn btn-primary col-md-12" ui-sref="pillSearch({ searchQuery: this.selected })"><strong>Find Pill</strong></button>
 			</div>
 		</div>
 	</form>

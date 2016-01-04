@@ -13,7 +13,11 @@ app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider",
 				url: "/index",
 				views: {
 					"pillWizard": { templateUrl: "components/pillWizard/index.html" },
-					"pillSearch": { templateUrl: "components/pillSearch/index.html" }
+					"pillSearch": { 
+						templateUrl: "components/pillSearch/index.html", 
+						controller: 'pillAutoCompleteCtrl',
+						controllerAs: 'vm'
+					}
 				}
 			})
 			.state("pillImprint", {
@@ -31,17 +35,28 @@ app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider",
 				}
 			})
 			.state("pillSearch", {
-				url: "/pillSearchResults",
+				url: "/pillSearchResults/:searchQuery",
 				views: {
-					"pillWizard": { templateUrl: "components/pillSearch/results-header.html" },
-					"pillSearch": { templateUrl: "components/pillSearch/results.html" }
+					"pillWizard": { 
+						templateUrl: "components/pillSearch/results-header.html",
+						controller: 'pillSearchResultsHeaderController',
+						controllerAs: 'vm'
+					 },
+					"pillSearch": { 
+						templateUrl: "components/pillSearch/results.html",
+						controller: 'pillSearchResultsController',
+						controllerAs: 'vm'
+					 }
 				},
-				resolve: {
+				/*resolve: {
 					lipitor: function () {
 						console.log("heko");
 					}
- 				},
-				controller: 'pillSearchController',
+ 				},*/
+ 				/*params: {
+ 					searchQuery: null
+ 				},*/
+				controller: 'pillSearchResultsController',
 				controllerAs: 'vm'
 			})
 	}]);
