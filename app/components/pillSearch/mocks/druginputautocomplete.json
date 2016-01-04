@@ -1,0 +1,21 @@
+{
+	"Drugs": [{
+		"imuid": 9940521,
+		"Term": "Lipitor"
+	}, {
+		"imuid": 9938084,
+		"Term": "Lipofen"
+	}, {
+		"imuid": 9946666,
+		"Term": "Lipram"
+	}, {
+		"imuid": 9946666,
+		"Term": "Lipram-CR"
+	}, {
+		"imuid": 9946666,
+		"Term": "Lipram-PN"
+	}, {
+		"imuid": 9946666,
+		"Term": "Lipram-UL"
+	}]
+}

@@ -48,11 +48,11 @@ app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider",
 						controllerAs: 'vm'
 					 }
 				},
-				/*resolve: {
-					lipitor: function () {
-						console.log("heko");
+				resolve: {
+					getPillResults: function (pillSearchService) {
+						pillSearchService.getPillResults();
 					}
- 				},*/
+ 				},
  				/*params: {
  					searchQuery: null
  				},*/

@@ -1,1 +1,15 @@
-	results table goes here
+	<table class="table table-bordered">
+		<tr ng-repeat="vm in vm.data">
+			<td><a ng-href="{{ vm.url }}"><img ng-src="http://www.healthline.com/images/{{ vm.image_path }}" width="200"></a></td>
+			<td>
+				<p>{{ vm.brand }}</p>
+				<p>Generic: {{ vm.category }}</p>
+			</td>
+			<td>
+				<p>Strength: {{ vm.dosage }}</p>
+				<p>Imprint: {{ vm.imprint }}</p>
+				<p>Maker: {{ vm.manufacturers }}</p>
+
+			</td>
+		</tr>
+	</table>
