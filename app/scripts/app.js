@@ -24,14 +24,22 @@ app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider",
 				url: "/pillImprint",
 				views: {
 					"pillWizard": { templateUrl: "components/pillWizard/pill-imprint.html" },
-					"pillSearch": { templateUrl: "components/pillSearch/index.html" }
+					"pillSearch": { 
+						templateUrl: "components/pillSearch/index.html",
+						controller: 'pillAutoCompleteCtrl',
+						controllerAs: 'vm'
+					 }
 				}
 			})
 			.state("pillShapeColor", {
 				url: "/pillShapeColor",
 				views: {
 					"pillWizard": { templateUrl: "components/pillWizard/pill-shape-color.html" },
-					"pillSearch": { templateUrl: "components/pillSearch/index.html" }
+					"pillSearch": { 
+						templateUrl: "components/pillSearch/index.html",
+						controller: 'pillAutoCompleteCtrl',
+						controllerAs: 'vm'
+					 }
 				}
 			})
 			.state("pillSearch", {

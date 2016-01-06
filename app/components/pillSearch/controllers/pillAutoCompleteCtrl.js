@@ -4,9 +4,12 @@ app.controller('pillAutoCompleteCtrl', function ($http) {
 	var self = this;
 
 	this.selected = undefined;
-	
-	$http.get('/components/pillSearch/mocks/druginputautocomplete.json').
-	success(function (json) {
-		self.drugs = json.Drugs;
-	});
+
+	this.getLocation = function (val) {
+		return $http.get('//dion-dev.healthline.com:3000/pills/' + val)
+		.then(function(response){
+			console.log(response);
+      		return response.data.Drugs;
+	    });
+	};
 });

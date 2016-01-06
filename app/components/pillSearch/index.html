@@ -2,7 +2,7 @@
 	<form>
 		<div class="form-group">
 			<div class="row">
-				<input type="text" uib-typeahead="item.Term for item in vm.drugs" placeholder="Enter pill name" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" ng-model="selected" class="col-md-12">
+				<input type="text" uib-typeahead="item.Term for item in vm.getLocation($viewValue)" placeholder="Enter pill name" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" ng-model="selected" class="col-md-12" >
 			</div>
 			
 			<div class="row">
