@@ -28,7 +28,7 @@ app.factory('pillSearchService', function ($http, $q) {
 			utilities.setPillResults(json.data);
 
             deferred.resolve({
-            	data:json.data.data
+            	data:json.data
             });
 		}).
 		error(function (msg, code) {
