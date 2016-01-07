@@ -8,8 +8,6 @@ app.factory('pillSearchService', function ($http, $q) {
 		data: []
 	};
 
-	return utilities;
-
 	function setPillResults (data) {
 		if (data) {
 			utilities.data = data;

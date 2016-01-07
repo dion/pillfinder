@@ -14,7 +14,6 @@ app.controller('pillAutoCompleteCtrl', function ($http) {
 			}
 		})
 		.then(function(response){
-			console.log(response);
       		return response.data.Drugs;
 	    });
 	};
