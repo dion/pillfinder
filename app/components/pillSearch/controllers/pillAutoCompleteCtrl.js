@@ -6,7 +6,13 @@ app.controller('pillAutoCompleteCtrl', function ($http) {
 	this.selected = undefined;
 
 	this.getLocation = function (val) {
-		return $http.get('//dion-dev.healthline.com:3000/pills/' + val)
+		return $http.jsonp('http://www.healthline.com/v2/druginputautocomplete', {
+			params: {
+				for: 'pills',
+				query: val,
+				callback: 'JSON_CALLBACK'
+			}
+		})
 		.then(function(response){
 			console.log(response);
       		return response.data.Drugs;
