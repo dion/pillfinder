@@ -57,20 +57,12 @@ app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider",
 					 }
 				},
 				resolve: {
-					getPillResults: function (pillSearchService) {
-						pillSearchService.getPillResults();
+					getPillResults: function ($stateParams, pillSearchService) {
+						return pillSearchService.getPillResults($stateParams.searchQuery);
 					}
  				},
- 				/*params: {
- 					searchQuery: null
- 				},*/
 				controller: 'pillSearchResultsController',
 				controllerAs: 'vm'
 			})
-	}]);
-
-
-
-app.controller('pillSearchController', function () {
-	console.log('hello');
-})
+	}
+]);
