@@ -1,7 +1,6 @@
 var app = angular.module('pillfinder');
 
-app.factory('pillSearchService', function ($stateParams, $http, $q) {
-	//this.searchQuery = $stateParams.searchQuery;
+app.factory('pillSearchService', function ($http, $q) {
 	var utilities = {
 		setPillResults: setPillResults,
 		getPillResults: getPillResults,
@@ -12,7 +11,6 @@ app.factory('pillSearchService', function ($stateParams, $http, $q) {
 	return utilities;
 
 	function setPillResults (data) {
-		console.log(data, arguments);
 		if (data) {
 			utilities.data = data;
 		}
