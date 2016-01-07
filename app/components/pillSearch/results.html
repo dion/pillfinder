@@ -1,4 +1,4 @@
-	<table class="table table-bordered">
+	<table class="table table-bordered" infinite-scroll="vm.addMoreItems()" infinite-scroll-distance="1" infinite-scroll-disabled="vm.busy">
 		<tr ng-repeat="vm in vm.data">
 			<td><a ng-href="{{ vm.url }}"><img ng-src="http://www.healthline.com/images/{{ vm.image_path }}" width="200"></a></td>
 			<td>

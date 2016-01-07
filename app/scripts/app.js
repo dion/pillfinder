@@ -1,6 +1,8 @@
 'use strict';
 
-var app = angular.module('pillfinder', ['ui.router', 'ui.bootstrap']);
+var app = angular.module('pillfinder', ['ui.router', 
+										'ui.bootstrap', 
+										'infinite-scroll']);
 
 app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider", 
 	function ($stateProvider, $urlRouterProvider, $httpProvider) {
@@ -58,7 +60,7 @@ app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider",
 				},
 				resolve: {
 					getPillResults: function ($stateParams, pillSearchService) {
-						return pillSearchService.getPillResults($stateParams.searchQuery);
+						return pillSearchService.fetchPillResults($stateParams.searchQuery);
 					}
  				},
 				controller: 'pillSearchResultsController',
